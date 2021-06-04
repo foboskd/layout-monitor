@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+@font-face{
+    font-family:Manrope-Regular;
+    src:url("../media/fonts/Manrope-Regular.woff");
+}
+
+@font-face{
+    font-family:Inter-Regular;
+    src:url("../media/fonts/Inter-Regular.woff");
+}
+
+
+html{
+    font-size:100%;
+}
+
+body{
+    padding:0;
+    margin:0;
+    font-family: Inter-Regular;
+    transition: all .3s ease;
+}
+
+.header-wrapper{
+    margin:0 auto;
+    max-width:87.5rem;
+    width:99%;
+    padding:0 .5%;
+    display:flex;
+    justify-content:space-between;
+    padding:1rem 0;
+    position:relative;
+}
+
+.logo-wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.logo-text{
+    font-family:Manrope-Regular;
+    margin:0 0 0 1rem;
+    display:flex;
+    align-items:center;
+    line-height:140%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #495057;
+}
+
+.search-icon-button-wrapper{
+    display:none;
+}
+
+.search-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.search-wrapper>label{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    position:relative;
+}
+
+.search-icon{
+    position:absolute;
+    left:.35rem;
+}
+
+.search-input{
+    width:19.75rem;
+    height:2.35rem;
+    padding: 0 0 0 1.75rem;
+    box-sizing:border-box;
+    border-radius: 6px;
+    border: 1px solid #ADB5BD;
+    background: #F8F9FA;
+}
+
+.profile-icon-button-wrapper{
+    display:none;
+}
+
+.profile-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.profile-name{
+    text-align: left;
+
+}
+
+.profile-role{
+    color: #868E96;
+}
+
+.profile-name{
+    margin-right:.75rem;
+    font-weight:bold;
+}
+
+.profile-button{
+    width:8rem;
+    height:2.5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: 1px solid #CFD4DA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-decoration:none;
+    color:black;
+}
+
+/*тут начинается второй контейнер которые содержит заголовок, кнопки и фильтрацию*/
+.sidebar-wrapper{
+    margin:0 auto;
+    margin-top:3.75rem;
+    max-width:87.5rem;
+    width:99%;
+    padding:0 .5%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addschool-button{
+    width:7.8125rem;
+    height:2.35rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #FF8F70;
+    border-radius: 6px;
+    color:#fff;
+    text-decoration:none;
+    margin-left:1.625rem;
+}
+
+.filters-wrapper > select{
+    min-width:17.5rem;
+    height:2.35rem;
+    border-radius: 6px;
+    border: 1px solid #ADB5BD;
+    background: #F8F9FA;
+    color: #868E96;
+    box-sizing: border-box;
+    padding:0 .5rem;
+}
+
+.filters-wrapper > label{
+    color: #868E96;
+    margin-left:1.1rem;
+}
+
+.filters-wrapper > label > select{
+    min-width:7.5rem;
+    height:2.35rem;
+    border-radius: 6px;
+    border: 1px solid #ADB5BD;
+    background: #F8F9FA;
+    color: #868E96;
+    padding:0 .5rem;
+}
+
+@media screen and (max-width:959px){
+
+    html{
+        font-size:90%;
+    }
+
+    .header-wrapper{
+        justify-content:space-around;
+    }
+
+    .logo-wrapper{
+        display:none;
+    }
+
+    .profile-button{
+        font-size:90%;
+    }
+}
+
+@media screen and (max-width:767px){
+    .sidebar-wrapper{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+@media screen and (max-width:549px){
+
+    .header-wrapper{
+        justify-content: flex-end;
+    }
+
+    /*заготовка под всплывашку поиска для включения свойство display перевести в flex*/
+    .search-wrapper{
+        display:none;
+        justify-content: center;
+        position:absolute;
+        top:0;
+        width:100%;
+        height:100%;
+        background-color: #495057;
+    }
+
+    .search-icon-button-wrapper{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding:0 .75rem;
+    }
+
+    /*заготовка под всплывашку поиска для включения свойство display перевести в flex*/
+    .profile-wrapper{
+        display:none;
+        justify-content: center;
+        position:absolute;
+        top:0;
+        width:100%;
+        height:100%;
+        background-color: #495057;
+    }
+
+    .profile-icon-button-wrapper{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding:0 .75rem;
+    }
+
+    /*тут начинается второй контейнер которые содержит заголовок, кнопки и фильтрацию*/
+
+    .title{
+        position:absolute;
+        top:0;
+        margin:1rem 0;
+    }
+
+    .addschool-button{
+        width:3.5rem;
+        height:3.5rem;
+        position:fixed;
+        right:1%;
+        bottom:5%;
+        border-radius:50%;
+        box-shadow: 0px 6px 6px rgba(80, 75, 75, .50);
+        font-size: 1.6rem;
+    }
+    .addschool-button>span{
+        display: none;
+    }
+
+
+}
