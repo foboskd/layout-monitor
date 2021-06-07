@@ -147,6 +147,11 @@ body{
     align-items: flex-start;
     margin-right: 1rem;
     margin-bottom: 2rem;
+
+}
+
+.back-to-school-button > svg{
+    fill:#868E96;
 }
 
 .title{
@@ -364,6 +369,67 @@ body{
     padding:0 .5rem;
 }
 
+/*стили второй таблицы*/
+
+.appeal-table{
+    width:100%;
+    padding:0 .5%;
+    min-width:87.5rem;
+    box-sizing:border-box;
+}
+
+.appeal-table-header-row,
+.appeal-table-row{
+    display:flex;
+    align-items: center;
+    padding:0;
+    margin:0;
+    list-style: none;
+    width:100%;
+    border-bottom: .1rem solid #BFC8D0;
+    padding-bottom: .9rem;
+}
+
+.appeal-table-row{
+    align-items: flex-start;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.appeal-table-header-row li{
+    color:#868E96;
+}
+
+.appeal-table-header-row li:nth-child(1),
+.appeal-table-row li:nth-child(1){
+    width:5rem;
+    padding-right:1rem;
+}
+.appeal-table-header-row li:nth-child(2),
+.appeal-table-row li:nth-child(2){
+    width:5rem;
+}
+.appeal-table-header-row li:nth-child(3),
+.appeal-table-row li:nth-child(3){
+    width:40rem;
+}
+.appeal-table-header-row li:nth-child(4),
+.appeal-table-row li:nth-child(4){
+    width:10rem;
+}
+.appeal-table-header-row li:nth-child(5),
+.appeal-table-row li:nth-child(5){
+    width:10rem;
+}
+
+.appeal-table-header-row li:nth-child(6),
+.appeal-table-row li:nth-child(6){
+    width:15rem;
+}
+
+
+
+
 @media screen and (max-width:959px){
 
     html{
@@ -476,12 +542,30 @@ body{
 
     /*тут начинается второй контейнер которые содержит заголовок, кнопки и фильтрацию*/
 
+    .back-to-school-button {
+        position: absolute;
+        top: 5%;
+        right:0;
+        padding: 1rem 0;
+        border-radius:50%;
+        background: #FF8F70;
+        height: .6rem;
+        width: 2.6rem;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 6px 6px rgba(80, 75, 75, .50);
+    }
+
+    .back-to-school-button > svg {
+        fill:#fff;
+    }
+
     .title{
         position:absolute;
         top:0;
         margin:1rem 0;
-        font-size: 1.2rem;
-        max-width: 20rem;
+        font-size: 1.05rem;
+        max-width: 18rem;
     }
 
     .addschool-button{
@@ -526,4 +610,22 @@ body{
     }
 
 
+}
+
+@media screen and (max-width: 424px){
+    html{
+        font-size: 80%;
+    }
+
+    .appeal-table-header-row li:nth-child(6),
+    .appeal-table-row li:nth-child(6){
+        padding-left:1rem;
+    }
+
+    .appeal-table-row li:nth-child(6) > .action-zone{
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: space-around;
+        height:10rem;
+    }
 }
