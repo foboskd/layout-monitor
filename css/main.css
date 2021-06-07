@@ -30,7 +30,7 @@ body{
     display:flex;
     justify-content:space-between;
     padding:1rem 0;
-    position:relative;
+    /*position:relative;*/
 }
 
 .logo-wrapper{
@@ -119,6 +119,10 @@ body{
     color:black;
 }
 
+.filter-icon-button-wrapper{
+    display:none;
+}
+
 /*тут начинается второй контейнер которые содержит заголовок, кнопки и фильтрацию*/
 .sidebar-wrapper{
     margin:0 auto;
@@ -137,6 +141,19 @@ body{
     align-items: center;
 }
 
+.back-to-school-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.title{
+    max-width:48rem;
+
+}
+
 .addschool-button{
     width:7.8125rem;
     height:2.35rem;
@@ -148,6 +165,33 @@ body{
     color:#fff;
     text-decoration:none;
     margin-left:1.625rem;
+}
+
+.filters-wrapper{
+    display:flex;
+}
+
+.filter-dashboard{
+    border: 1px solid #DEE2E6;
+    border-radius: 6px;
+    width:12rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:.15rem;
+    box-sizing: border-box;
+    margin-left:.35rem;
+}
+
+.filter-dashboard-number{
+    font-size:2.5rem;
+    color:#FF8F70;
+    margin:0;
+}
+
+.filter-dashboard-text{
+    word-break: break-word;
+    margin:0;
 }
 
 .filters-wrapper > select{
@@ -176,6 +220,150 @@ body{
     padding:0 .5rem;
 }
 
+/*дальше идут стили на таблицу со школами*/
+
+.table-wrapper{
+    margin:0 auto;
+    margin-top:3.75rem;
+    max-width:87.99rem;
+    overflow: auto;
+}
+
+.table{
+    width:100%;
+    padding:0 .5%;
+    min-width:87.5rem;
+    box-sizing:border-box;
+}
+
+.table-header-row,
+.table-row{
+    display:flex;
+    align-items: center;
+    padding:0;
+    margin:0;
+    list-style: none;
+    width:100%;
+    border-bottom: .1rem solid #BFC8D0;
+    padding-bottom: .9rem;
+}
+
+.table-row{
+    align-items: flex-start;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.table-header-row li{
+    color:#868E96;
+}
+
+.table-header-row li:nth-child(1),
+.table-row li:nth-child(1){
+    width:26rem;
+    padding-right:1rem;
+}
+.table-header-row li:nth-child(2),
+.table-row li:nth-child(2){
+    width:18rem;
+}
+.table-header-row li:nth-child(3),
+.table-row li:nth-child(3){
+    width:13rem;
+}
+.table-header-row li:nth-child(4),
+.table-row li:nth-child(4){
+    width:13rem;
+}
+.table-header-row li:nth-child(5),
+.table-row li:nth-child(5){
+    width:20rem;
+}
+
+.link-in{
+    color:black;
+    text-decoration:none;
+    position:relative;
+    display: block;
+}
+
+.link-in:after{
+    content:"";
+    background-image:url("../media/icons/icon-link.svg");
+    background-repeat: no-repeat;
+    width:1.1rem;
+    height:1.1rem;
+    display: none;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+
+.link-in:hover:after{
+    display: block;
+}
+
+.link-in:hover{
+    text-decoration:underline;
+}
+
+.action-zone{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.action-zone > svg{
+    padding-right:1.5rem;
+}
+
+.qr-button-action{
+    padding: .5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #CFD4DA;
+    border-radius: 6px;
+    color:black;
+    text-decoration:none;
+}
+
+.qr-button-action > svg{
+    padding-right:1rem;
+}
+
+/*тут идут стили менюшки конкретной школы*/
+
+.tools-wrapper{
+    margin:0 auto;
+    margin-top:3.75rem;
+    max-width:87.5rem;
+    width:99%;
+    padding:0 .5%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tools-wrapper > a{
+    margin-right: 1rem;
+}
+
+.tools-wrapper > label{
+    color: #868E96;
+    margin-left:1.1rem;
+}
+
+.tools-wrapper > label > select{
+    min-width:7.5rem;
+    height:2.35rem;
+    border-radius: 6px;
+    border: 1px solid #ADB5BD;
+    background: #F8F9FA;
+    color: #868E96;
+    padding:0 .5rem;
+}
+
 @media screen and (max-width:959px){
 
     html{
@@ -195,11 +383,34 @@ body{
     }
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
     .sidebar-wrapper{
         flex-direction:column;
         align-items:flex-start;
     }
+
+    .filter-dashboard:nth-child(1){
+        margin:0;
+    }
+
+    .tools-wrapper{
+        margin-top: 1.75rem;
+        font-size: 95%;
+        overflow: scroll;
+    }
+
+    .tools-wrapper > a{
+        min-width:9rem;
+    }
+
+    .tools-wrapper > a:nth-child(2){
+        min-width:19rem;
+    }
+
+    .tools-wrapper > label{
+        min-width:16rem;
+    }
+
 }
 
 @media screen and (max-width:549px){
@@ -214,12 +425,25 @@ body{
         justify-content: center;
         position:absolute;
         top:0;
-        width:100%;
+        width:99%;
         height:100%;
         background-color: #495057;
+        padding-top:.5rem;
+        z-index:100;
+    }
+
+    .search-input{
+
     }
 
     .search-icon-button-wrapper{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding:0 .75rem;
+    }
+
+    .filter-icon-button-wrapper{
         display:flex;
         justify-content: center;
         align-items:center;
@@ -230,11 +454,17 @@ body{
     .profile-wrapper{
         display:none;
         justify-content: center;
+        align-items: flex-start;
         position:absolute;
         top:0;
-        width:100%;
+        width:99%;
         height:100%;
         background-color: #495057;
+        z-index:100;
+    }
+
+    .profile-wrapper p, .profile-wrapper a{
+        margin-top:1rem;
     }
 
     .profile-icon-button-wrapper{
@@ -250,6 +480,8 @@ body{
         position:absolute;
         top:0;
         margin:1rem 0;
+        font-size: 1.2rem;
+        max-width: 20rem;
     }
 
     .addschool-button{
@@ -264,6 +496,33 @@ body{
     }
     .addschool-button>span{
         display: none;
+    }
+
+    .filters-wrapper{
+        display: none;
+    }
+
+    .filters-wrapper{
+        position: absolute;
+        top:0;
+        width:99%;
+        height:100%;
+        background-color:#495057;
+        padding-top:.5rem;
+
+    }
+
+    /*пришлось немного накидать неудобного стиля*/
+    .filters-wrapper > label > span{
+        display: none;
+    }
+
+    .filters-wrapper > label{
+        margin-left:0;
+    }
+
+    .filters-wrapper > label > select{
+        margin-top:.85rem;
     }
 
 
