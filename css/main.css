@@ -190,7 +190,7 @@ body{
 .title-wrapper{
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .back-to-school-button {
@@ -208,6 +208,7 @@ body{
 
 .title{
     max-width:48rem;
+    margin: 0;
 
 }
 
@@ -370,8 +371,13 @@ body{
     align-items: center;
 }
 
-.action-zone > svg{
+.action-zone a svg{
     padding-right:1.5rem;
+    fill:#BFC8D0;
+}
+
+.action-zone:hover a svg{
+    fill:black;
 }
 
 .qr-button-action{
@@ -487,6 +493,95 @@ body{
     color:#C81919;
 }
 
+/*форма добавления школы*/
+
+.form-wrapper{
+    margin:0 auto;
+    max-width:87.5rem;
+    width:99%;
+    padding:0 .5%;
+}
+
+.form-wrapper form fieldset{
+    border:0;
+    max-width:43.75rem;
+    background-color: #F8F8F8;
+    padding:1rem 2rem;
+    box-sizing: border-box;
+}
+
+.form-wrapper label{
+    font-family: Inter-Regular;
+    font-style: normal;
+    font-weight: normal;
+    color: #21252A;
+}
+
+.form-wrapper label > i{
+    font-style: normal;
+    color: red;
+}
+
+.form-wrapper input,
+.form-wrapper textarea{
+    margin-bottom: 2rem;
+}
+
+#school-name{
+    max-width:39.5rem;
+    width: 100%;
+    min-height:3.75rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+}
+#school-address{
+    max-width:39.5rem;
+    width: 100%;
+    min-height:2rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+}
+
+.form-input-wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.form-input-wrapper > label{
+    max-width:20rem;
+    width: 100%;
+}
+
+#school-district{
+    width: 100%;
+    min-height:2rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+}
+
+.coords{
+    display: flex;
+    justify-content: space-between;
+    width:14rem;
+}
+
+.coords > label{
+    max-width:6rem;
+    width: 100%;
+}
+
+.coords > label > input{
+    width: 100%;
+    min-height:2rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+}
+
+
 @media screen and (max-width: 1140px){
     header{
         font-size:80%;
@@ -500,6 +595,9 @@ body{
     }
     .filter-dashboard:nth-child(1){
         margin-left: 0;
+    }
+    .filter-dashboard{
+        margin-top:1rem;
     }
     .tools-wrapper{
         margin-top: 1.75rem;
@@ -554,9 +652,12 @@ body{
         flex-direction:column;
         align-items:flex-start;
     }
+}
 
-    .filter-dashboard:nth-child(1){
-        margin:0;
+@media screen and (max-width:830px){
+    .form-input-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
@@ -716,7 +817,9 @@ body{
         margin-top:.85rem;
     }
 
-
+    .action-zone{
+        justify-content: flex-end;
+    }
 }
 
 @media screen and (max-width: 424px){
